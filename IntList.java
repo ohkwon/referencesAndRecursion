@@ -23,6 +23,19 @@ public class IntList {
     return size;
   }
 
+  public static void iterativePrintAll(IntList p) {
+    while (p.tail != null) {
+      System.out.println(p.head);
+      p = p.tail;
+    }
+  }
+
+  public void printAll() {
+    if (this.tail != null) {
+      System.out.println(this.head);
+      this.tail.printAll();
+    }
+  }
   public int get(int i) {
     if (i == 0) {
       return this.head;

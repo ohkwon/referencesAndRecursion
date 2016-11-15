@@ -6,12 +6,14 @@ public class IntListIntroLauncher {
     while (i < 15) {
       p.tail = new IntList(i * 5, null);
       p = p.tail;
+      i = i + 1;
     }
     System.out.println(og);
     System.out.println(og.size());
     System.out.println(og.iterativeSize());
     System.out.println(og.get(8));
-    System.out.println(IntList.incrList(og, 25));
-    System.out.println(IntList.dcrList(og, 30));
+    IntList.incrList(og, 25).printAll();
+    IntList.dcrList(og, 30).printAll();
+    og.printAll();
   }
 }
